@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/font-awesome-4.7.8/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Polaris</title>
+    
+</head>
+<body>
+
+    <div class="container2">
+        <div class="estatico">Bem-vindo a</div>
+        <ul class="dinamico">
+            <li><span>Polaris</span></li>
+        </ul>
+    </div>
+
+<!-- Background -->
+
+    <div class="container">
+        <a href="index.html" id="link-imagem">
+            <div id="imagem-container"> <!-- Envolve a imagem em uma div -->
+                <img src="img/Estrela2_Brilhante_Sol_Brilhante_Flash_Brilhante_Brilhos_PNG_Transparente_Sem_Fundo.png" alt="Botão" id="imagem-botao" height="500px" width="500px">
+            </div>
+        </a>
+        <div class="bolhas">
+            <span style="--i:11"></span>
+            <span style="--i:14"></span>
+            <span style="--i:28"></span>
+            <span style="--i:4"></span>
+            <span style="--i:8"></span>
+            <span style="--i:26"></span>
+            <span style="--i:30"></span>
+            <span style="--i:19"></span>
+            <span style="--i:1"></span>
+            <span style="--i:5"></span>
+            <span style="--i:16"></span>
+            <span style="--i:26"></span>
+            <span style="--i:11"></span>
+            <span style="--i:10"></span>
+            <span style="--i:9"></span>
+            <span style="--i:20"></span>
+            <span style="--i:21"></span>
+            <span style="--i:25"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:30"></span>
+            <span style="--i:19"></span>
+            <span style="--i:16"></span>
+            <span style="--i:12"></span>
+            <span style="--i:4"></span>
+            <span style="--i:2"></span>
+            <span style="--i:18"></span>
+            <span style="--i:10"></span>
+            <span style="--i:8"></span>
+            <span style="--i:7"></span>
+            <span style="--i:3"></span>
+            <span style="--i:7"></span>
+            <span style="--i:19"></span>
+            <span style="--i:25"></span>
+            <span style="--i:22"></span>
+            <span style="--i:18"></span>
+        </div>
+                
+    </div>
+
+    <!-- clique e direcionamento da pagina -->
+
+    <script>
+        document.getElementById("link-imagem").addEventListener("click", function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            // Adicione um efeito de fade antes de redirecionar
+            document.body.style.transition = "opacity 0.3s";
+            document.body.style.opacity = "0";
+            setTimeout(function() {
+                window.location.href = "home.html"; // Redireciona para a próxima página
+            }, 300);
+        });
+    </script>
+
+
+</body>
+</html>

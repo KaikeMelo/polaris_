@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;4008display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #0c192c;  
+    display: flex;
+    justify-content: center; /* Centralize horizontalmente */
+    align-items: center; /* Centralize verticalmente */
+}
+
+/* ... Seus estilos existentes ... */
+
+.container2 {
+    display: inline-flex;
+    position: absolute;
+    top: 25%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Move para o centro */
+    color: white; /* Cor do texto */
+    text-align:left; /* Centraliza o texto no meio */
+}
+
+.container2 .estatico {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.container2 .dinamico {
+    margin-left: 15px;
+    line-height: 35px;
+    height: 35px;
+    overflow: hidden;
+    font-weight: bold; /* Adiciona negrito para destacar o contorno neon */
+    color: transparent; /* Torna o texto transparente para esconder o texto padrão */
+    -webkit-text-stroke: 2px #0099cc; /* Adiciona um contorno azul claro ao texto */
+    text-shadow: 0 0 10px #0099cc; /* Define uma sombra de texto neon */
+    animation: neon 1.5s ease-in-out infinite alternate; /* Adiciona uma animação para o efeito neon */
+}
+
+@keyframes neon {
+    0% {
+        -webkit-text-stroke: 2px #0099cc; /* Comece com o contorno neon */
+        text-shadow: 0 0 10px #0099cc; /* Comece com a sombra de texto neon */
+    }
+    100% {
+        -webkit-text-stroke: 3px #0099cc; /* Aumente a largura do contorno */
+        text-shadow: 0 0 20px #0099cc; /* Aumente a intensidade da sombra de texto neon */
+    }
+}
+
+.dinamico li{
+    color: #2610ebbe;
+    list-style: none;
+    font-size: 30px;
+    font-weight: 500;
+    left: 0;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+       top: 0%;
+    }
+}
+.dinamico li span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-left: 2px solid #270cbd;
+    animation: typing 1.5s steps(10) infinite ;
+    background: #0c192c;
+}
+
+.dinamico li span{
+    position: relative;
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+/* Estilos para a imagem botão */
+#imagem-botao {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s, opacity 0.3s; /* Transição suave de zoom e opacidade */
+}
+
+/* Aplicar zoom ao passar o mouse */
+#link-imagem:hover #imagem-botao {
+    transform: scale(1.1);
+}
+
+.bolhas {
+    position: absolute;
+    display: flex;
+    z-index: 0; /* Coloca o fundo animado atrás do botão */
+}
+
+.bolhas span {
+    width: 30px;
+    height: 30px;
+    background: #ecdfdf;
+    margin: 0 4px; 
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #ecdfdf44,
+    0 0 50px #ecdfdf,
+    0 0 100px #ecdfdf;
+    animation: animar calc(150s / var(--i)) linear infinite;
+}
+
+@keyframes animar {
+    0% {
+       transform: translateY(100vh) scale(0);
+    }
+    100% {
+       transform: translateY(-100vh) scale(1);
+    }
+}
+
+.bolhas span:nth-of-type(even) {
+    background: #ecdfdf;
+    box-shadow: 0 0 0 10px #ecdfdf44,
+    0 0 50px #ecdfdf,
+    0 0 100px #ecdfdf;
+}

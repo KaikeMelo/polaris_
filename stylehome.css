@@ -1,0 +1,243 @@
+
+/* Estilo para o fundo estrelado */
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    margin-bottom: 30vh; /* Alterando o valor posso aumentar o espaço para baixo */
+}
+
+body {
+    min-height: 100vh;
+    background: #0c192c;  
+    display: flex;
+    justify-content: center; /* Centralize horizontalmente */
+    align-items: center; /* Centralize verticalmente */
+}
+
+/* navbar */
+
+.navbar {
+    background-color: #333; /* Cor de fundo da navbar */
+}
+.navbar-brand {
+    color: #fff; /* Cor do texto da logo */
+}
+.navbar-nav .nav-link {
+    color: #fff !important; /* Cor do texto das abas de navegação */
+}
+.navbar-toggler-icon {
+    background-color: #fff; /* Cor do ícone do botão de alternância */
+}
+/* Estilo personalizado para o carrossel */
+.carousel-container {
+    border-radius: 20px; /* Border-radius suave */
+    padding: 20px; /* Espaçamento interno */
+}
+.carousel-item img {
+    width: 60%; /* Defina a largura desejada (60% da largura da tela) */
+    height: auto; /* Mantenha a proporção da altura */
+    margin: 0 auto; /* Centralize horizontalmente */
+}
+/* Ajuste para posicionar o carrossel próximo à navbar */
+.carousel {
+    margin-top: 1rem;
+    margin-left: auto; /* Alinhe à direita */
+    margin-right: auto; /* Alinhe à esquerda */
+}
+/* Alinhar as abas de navegação à direita */
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* invercao de cores dos botoes */
+.nav-link.btn-zoom-invert:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Defina a escala padrão do botão */
+.btn-zoom-invert {  
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+/*  passar o mouse e inverta as cores */
+.btn-zoom-invert:hover {
+    transform: scale(1.1);
+    background-color: white !important; /* Cor de fundo invertida */
+    color: black !important; /* Cor do texto invertida */
+}
+
+/* Aplique a escala menor ao ser clicado */
+.btn-zoom-invert:active {
+    transform: scale(0.9);
+}
+
+/* corpo */
+
+h1 {
+  text-align: center;
+  z-index: 1;
+  color: aliceblue;
+}
+
+html, body {
+    overflow-x: hidden;
+} 
+/* para tirar as barras de rolagaem */
+
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.custom-card-group {
+    margin-top: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.custom-card {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* escala padrão do card */
+.custom-card {
+    transform: scale(1);
+}
+
+/* Aplique a escala maior e a mudança de cores ao passar o mouse */
+.custom-card:hover {
+    transform: scale(1.1);
+    background-color: white !important; /* Cor de fundo invertida */
+    z-index: 1;
+}
+
+/* Aplique a escala menor ao ser clicado */
+.custom-card:active {
+    transform: scale(0.9);
+}
+
+/* Estilo do texto dentro dos cards */
+.custom-card-title,
+.custom-card-text {
+    color: white; /* Cor do texto dentro dos cards */
+}
+
+/* Aplique a cor do texto preto ao passar o mouse */
+.custom-card:hover .custom-card-title,
+.custom-card:hover .custom-card-text {
+    color: black; /* Cor do texto dentro dos cards no hover */
+}
+
+.card-group{
+   z-index: 1;
+   margin-bottom: 100px; /*serve para adicionar espaco a baixo do item */
+   
+}
+
+.card-title{
+    color: aliceblue;
+}
+
+.card-text{
+    color: aliceblue;
+}
+
+.text-body-secondary{
+    color: aliceblue;
+}
+
+.col-md-8{
+     z-index: 1; /*Para trazer o carrosel para frente do background */
+}
+
+/* Estilos para a imagem botão */
+#imagem-botao {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s, opacity 0.3s; /* Transição suave de zoom e opacidade */
+}
+
+/* Aplicar zoom ao passar o mouse */
+#link-imagem:hover #imagem-botao {
+    transform: scale(1.1);
+}
+
+.bolhas {
+    position: fixed; /* Alterado para "fixed" para que as bolhas cubram toda a tela */
+    top: 0;
+    left: 0;
+    width: 100%; /*o 100% faz o efeito das bolhas cobrirem toda a area visivel*/
+    height: 100%; /*o 100% faz o efeito das bolhas cobrirem toda a area visivel*/
+    display: flex;
+    z-index: 0; /* Coloca o fundo animado atrás do botão */
+}
+
+.bolhas span {
+    width: 30px;
+    height: 30px;
+    background: #ecdfdf;
+    margin: 0 4px; 
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #ecdfdf44,
+    0 0 50px #ecdfdf,
+    0 0 100px #ecdfdf;
+    animation: animar calc(150s / var(--i)) linear infinite;
+}
+
+
+@keyframes animar {
+    0% {
+       transform: translateY(100vh) scale(0);
+    }
+    100% {
+       transform: translateY(-100vh) scale(1);
+    }
+}
+
+.bolhas span:nth-of-type(even) {
+    background: #ecdfdf;
+    box-shadow: 0 0 0 10px #ecdfdf44,
+    0 0 50px #ecdfdf,
+    0 0 100px #ecdfdf;
+}
+
+/* cards */
+
+.custom-card {
+    width: 50% ; /* Ajuste a largura conforme necessário (porcentagem ou valor fixo) */
+    margin: 0 auto; /* Centralize horizontalmente */
+}
+/* style footer */
+
+/* Reduza o espaçamento interno do footer e dos elementos internos */
+
+.hidden-footer {
+    display: none; /*ocultar footer */
+  }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+  }
+
+/* Ajuste o espaçamento interno dos elementos internos */
+footer a.btn-floating {
+    padding: 2px; /* Espaçamento interno dos ícones de mídia social */
+}
+
+/* Ajuste o espaçamento interno do texto de direitos autorais */
+footer .text-center.text-dark p {
+    padding: 4px; /* Espaçamento interno do texto de direitos autorais */
+}
